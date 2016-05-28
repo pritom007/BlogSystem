@@ -1,0 +1,120 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 7, 2015, 5:21:04 PM
+    Author     : PritomKumar
+*/
+        div#profilepic{
+        border: 3px double #000000;
+        margin-top: 2px;
+        height:210px;
+        width: 200px;
+        }
+
+        #tabs ul {
+        padding: 0px;
+        margin: 0px;
+        margin-left: 10px;
+        list-style-type: none;
+
+        }
+
+        #tabs ul li {
+        display: inline-block;
+        clear: none;
+        float: left;
+        height: 15px;
+        }
+
+        #tabs ul li a {
+        position: relative;
+        margin-top: 16px;
+        display: block;
+        margin-left: 6px;
+        line-height: 24px;
+        padding-left: 10px;
+        background-color: #606060;
+        color: #FFF;
+        z-index: 9999;
+        border: 1px solid #ccc;
+        border-bottom: 0px;
+        -moz-border-radius-topleft: 6px;
+        border-top-left-radius: 6px;
+        -moz-border-radius-topright: 6px;
+        border-top-right-radius: 6px;
+        width: 150px;
+        text-decoration: none;
+        font-weight: bold;
+        }
+
+        #tabs ul li a:hover {
+        background: #400090;
+        color: white;
+        transition: all 0.22s linear;
+        cursor: pointer;
+        }
+
+        #tabs #Content_Area {
+        padding: 0 15px;
+        clear:both;
+        overflow: hidden;
+        line-height:19px;
+        position: relative;
+        top: 40px;
+        z-index: 5;
+        height: 400px;
+        overflow: hidden;
+        }
+
+        #container1 { 
+            padding-left: 15px;
+            border: 1px solid #ccc;
+            height: 300px;}
+
+        #submit{
+                height: 35px;
+                width: 170px;
+                padding: 2px;
+                font-size: 16px;
+                cursor: pointer;
+                margin-top: 20px;
+                background-color: #606060;
+                color: #FFF;
+                margin-bottom: 15px;
+                border: none;
+                border-radius: 3px 3px 3px 3px;
+                }
+        #submit:hover
+        {
+                background: #400090;
+                color: white;
+                transition: all 0.22s linear;
+        }
+
+
+        #pass0,#pass, #pass2, #email,#deletetag{
+                height: 35px;
+                width: 508px;
+                padding: 2px;
+                font-size: 16px;
+                margin-bottom: 10px;
+                margin-top: 10px;
+        }
+        label{
+          font-style: italic;
+          font-size: 24px;
+          font-family: cursive;
+          color: cornflowerblue;
+        }
+        span#tag1,span#tag2{
+           font-style: italic;
+          font-size: 15px;
+          font-family: cursive;
+          color: red;
+        }
+
+            
+        

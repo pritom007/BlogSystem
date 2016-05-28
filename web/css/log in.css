@@ -1,0 +1,112 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+html{
+	background-image: url(blurred.jpg);
+	background-repeat: no-repeat;
+	background-size: 1384px 666px;
+	width: auto;
+	height: 666px;
+}
+header{
+	width: 99.25%;
+	height: 80px;
+	text-align: center;
+	background-color: #17175C;
+	font-size: 50px;
+	color: #c0c0c0;
+	font-weight: bold;
+	padding: 5px;
+}
+#wrapper{
+	width:900px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#container{
+	margin-top: 50px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 400px;
+	height: 400px;
+	padding: 10px;
+	font-color: #ffffff;
+	background:#4C9ED9;
+	border-radius: 11px 11px 2px 2px;
+	opacity: 0.8;
+	font: 300 15px "helvetica neue",helvetica,verdana,tahoma,arial,sans-serif;
+	transition: all 0.22s linear;
+	
+}
+#container:hover
+{
+	opacity: 1;
+	transition: all 0.22s linear;
+}
+#logo{
+	height: 100px;
+	width: 100px;
+	position: relative;
+	margin-left: 30px;
+	top:45px;
+}
+#top{
+	font-family: "helvetica neue",helvetica,verdana,tahoma,arial,sans-serif;
+	font-weight: bold;
+	font-size: 30px;
+    	position: relative;
+	top:-40px;
+}
+#container form{
+	margin-top: 10px;
+	width: 345px;
+	margin-left: 32px;
+}
+
+#username, #password{
+	height: 35px;
+	width: 337px;
+	padding: 2px;
+	font-size: 16px;
+}
+#submit, #cancel{
+	height: 35px;
+	width: 170px;
+	font-size: 16px;
+	cursor: pointer;
+	background-color: rgb(190, 202, 214);
+	color: #000000;
+	border: none;
+	border-radius: 3px 3px 3px 3px;
+	margin-bottom: 15px;
+	transition: all 0.22s linear;
+}
+#submit:hover, #cancel:hover
+{
+	background: #17175C;
+	color: white;
+	transition: all 0.22s linear;
+}
+
+#create{
+	text-decoration: none;
+	color: #17175C;
+}
+footer{
+	position: fixed;
+	width: 100%;
+	left: 0px;
+	text-align: center;
+	bottom: 3px;
+	align: center;
+	text-align: center;
+	background-color: #17175C;
+	color: #c0c0c0;
+	
+}
+footer > div
+{
+	display: inline-block;
+}

@@ -1,0 +1,103 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+html{
+	background: url(blurred.jpg) no-repeat center center fixed;
+	-webkit-background-size: 100%;
+}
+#wrapper{
+	margin-left: auto;
+	margin-right: auto;
+	background:inherit;
+	
+}
+
+
+#container{
+	margin-top: 50px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 520px;
+	height:530px;
+	padding: 10px;
+	-webkit-border-radius: 11px 11px 2px 2px;
+	opacity: 0.9;
+    	filter: alpha(opacity=60);
+	font: 300 15px "helvetica neue",helvetica,verdana,tahoma,arial,sans-serif;
+	color: rgb(197, 61, 61);
+	
+}
+#container:hover
+{
+	opacity: 0.8;
+    	filter: alpha(opacity=80);
+}
+
+
+#container form{
+	margin-top: 50px;
+}
+label{
+	font-size: 16px;
+	color: #A8A7A7;
+	padding-top: 4px;
+	margin-right: 25px;
+}
+
+#value{
+	float: right;
+}
+
+#login{
+	height: 35px;
+	width: 508px;
+	padding: 2px;
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+
+.pass_conpass_email{
+	height: 35px;
+	width: 508px;
+	padding: 2px;
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+#submit, #cancel{
+	height: 35px;
+	width: 170px;
+	padding: 2px;
+	font-size: 16px;
+	cursor: pointer;
+	margin-top: 50px;
+	background-color: #606060;
+	color: #FFF;
+	margin-bottom: 15px;
+	border: none;
+	border-radius: 3px 3px 3px 3px;
+}
+#submit:hover, #cancel:hover
+{
+	background: #400090;
+	color: white;
+	transition: all 0.22s linear;
+}
+
+#already{
+	text-decoration: none;
+	color: #198FFF;
+}
+footer{
+	font-size: 16px;
+	color: #A8A7A7;
+	width: 100%;
+	text-align: center;
+	bottom: 3px;
+	align: center;
+	font-family: Immortal;	
+}
+footer > div
+{
+	display: inline-block;
+}
