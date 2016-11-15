@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package UserOperator;
+import encryption.Encryption;
 import UserInformation.*;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -36,9 +37,12 @@ public class Login extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         request.setCharacterEncoding("UTF-8");
         PrintWriter out = response.getWriter();
+        
         try {
             con = Launcher.getConnection();
-            if(Launcher.login(con,request.getParameter("username"),request.getParameter("password"))) {
+           byte[] password = Launcher.encryp.encrypt(request.getParameter("password"));
+           System.out.println("password is: "+password);
+            if(Launcher.login(con,request.getParameter("username"),new String(password))) {
                 User user = new User(request.getParameter("username"));
                 //user.signature = User.getSignature(user.username,con);
                 user.pictureUrl = User.getPicture(user.username);

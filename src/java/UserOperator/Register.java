@@ -5,7 +5,7 @@ package UserOperator;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
+import encryption.Encryption;
 import UserInformation.User;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -41,6 +41,7 @@ public class Register extends HttpServlet {
         PrintWriter out = response.getWriter();
         try {
             con = Launcher.getConnection();
+            //byte[] password = Launcher.encryp.encrypt(request.getParameter("password"));
             int temp =Launcher.insertUser(con,request.getParameter("username"),request.getParameter("password"),request.getParameter("phone"),request.getParameter("mail"),request.getParameter("gender"));//
             if (temp==0) {
                 User user = new User(request.getParameter("username"));

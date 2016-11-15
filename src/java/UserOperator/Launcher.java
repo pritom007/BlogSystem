@@ -1,14 +1,16 @@
 package UserOperator;
 
+import encryption.Encryption;
 import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Launcher {
-    static String connectionUrl = "jdbc:mysql://localhost:3306/myblog?useUnicode=true&characterEncoding=UTF-8";
-    static String username = "root";
-    static String Password = "password";
+    static String connectionUrl = "jdbc:mysql://sql6.freemysqlhosting.net:3306/sql6144474?useUnicode=true&characterEncoding=UTF-8";
+    static String username = "sql6144474";
+    static String Password = "CXyef4z939";
     static Connection con;
+    static Encryption encryp = new Encryption();
     public static Connection getConnection() {
         try {
                 // class name for mysql driver
@@ -46,15 +48,15 @@ public class Launcher {
         }
         try {
             String[] update = {"INSERT INTO `users` (`username`, `password`,`mail`,`sex`) VALUES ('" + username + "', '" + password + "', '" +  mail + "', '"+sex+"');",//add usr
-             "CREATE TABLE `myblog`.`signatureof" +username+"` (`id` INT NOT NULL AUTO_INCREMENT,`content` VARCHAR(45) NOT NULL,`date` DATETIME NOT NULL,PRIMARY KEY (`id`));",//Create user signature table
-             "CREATE TABLE `myblog`.`pictureof" +username+"` (`id` INT NOT NULL AUTO_INCREMENT,`content` VARCHAR(45) NOT NULL,`date` DATETIME NOT NULL,PRIMARY KEY (`id`));",//Create user avatar table
-             "CREATE TABLE `myblog`.`blogof" +username+"` (`id` INT NOT NULL AUTO_INCREMENT,  `tittle` TEXT NULL,  `date` DATETIME NULL,  `content` TEXT NULL,  `lable` VARCHAR(45) NULL,  `sort` VARCHAR(45) NULL,  `reader` INT NULL,  `good` INT NULL,  `assement` INT NULL,  PRIMARY KEY (`id`));",
+             "CREATE TABLE `sql6144474`.`signatureof" +username+"` (`id` INT NOT NULL AUTO_INCREMENT,`content` VARCHAR(45) NOT NULL,`date` DATETIME NOT NULL,PRIMARY KEY (`id`));",//Create user signature table
+             "CREATE TABLE `sql6144474`.`pictureof" +username+"` (`id` INT NOT NULL AUTO_INCREMENT,`content` VARCHAR(45) NOT NULL,`date` DATETIME NOT NULL,PRIMARY KEY (`id`));",//Create user avatar table
+             "CREATE TABLE `sql6144474`.`blogof" +username+"` (`id` INT NOT NULL AUTO_INCREMENT,  `tittle` TEXT NULL,  `date` DATETIME NULL,  `content` TEXT NULL,  `lable` VARCHAR(45) NULL,  `sort` VARCHAR(45) NULL,  `reader` INT NULL,  `good` INT NULL,  `assement` INT NULL,  PRIMARY KEY (`id`));",
                 //blog post
-             "CREATE TABLE `myblog`.`sortof" +username+"` (`id` INT NOT NULL AUTO_INCREMENT,`sortName` VARCHAR(45) NOT NULL,`number` INT NOT NULL,PRIMARY KEY (`id`));",//博文分类表
-             "CREATE TABLE `myblog`.`friendof" +username+"` (`id` INT NOT NULL AUTO_INCREMENT,`name` VARCHAR(45) NULL,PRIMARY KEY (`id`));",//friend form
-             "INSERT INTO `myblog`.`blogof" +username+"` (`tittle`, `date`, `content`, `lable`, `sort`, `reader`, `good`, `assement`) VALUES ('Welcome to myblog', now(), 'Welcome to myblog', 'Everybody', 'Science', '0', '0', '0');",//First blog
-             "INSERT INTO `myblog`.`friendof" +username+"` (`name`) VALUES ('pritom');",//add friend
-             "INSERT INTO `myblog`.`sortof" +username+"` (`sortName`, `number`) VALUES ('Science', '1');"//catagory
+             "CREATE TABLE `sql6144474`.`sortof" +username+"` (`id` INT NOT NULL AUTO_INCREMENT,`sortName` VARCHAR(45) NOT NULL,`number` INT NOT NULL,PRIMARY KEY (`id`));",//博文分类表
+             "CREATE TABLE `sql6144474`.`friendof" +username+"` (`id` INT NOT NULL AUTO_INCREMENT,`name` VARCHAR(45) NULL,PRIMARY KEY (`id`));",//friend form
+             "INSERT INTO `sql6144474`.`blogof" +username+"` (`tittle`, `date`, `content`, `lable`, `sort`, `reader`, `good`, `assement`) VALUES ('Welcome to myblog', now(), 'Welcome to myblog', 'Everybody', 'Science', '0', '0', '0');",//First blog
+             "INSERT INTO `sql6144474`.`friendof" +username+"` (`name`) VALUES ('pritom');",//add friend
+             "INSERT INTO `sql6144474`.`sortof" +username+"` (`sortName`, `number`) VALUES ('Science', '1');"//catagory
             };
             for (int i=0; i<update.length; i++) {
                 con.createStatement().executeUpdate(update[i]);
