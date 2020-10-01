@@ -18,8 +18,8 @@ import javax.servlet.http.HttpSession;
  * @author lenovo
  */
 public class Blog {
-    public String tittle="",date="",content="",lable="",sort="",mail="",userofblog="";
-    public int reader,good,assement,id;
+    public String tittle="", date="", content="", lable="", sort="", mail="", userofblog="";
+    public int reader, good, assement, id;
     public static Connection con;
     public Blog(String username,String tittle,boolean cut) {
         con = Launcher.getConnection();
